@@ -21,6 +21,7 @@ export default {
 <style lang="scss">
 
 .smartphone-frame {
+    margin: 0 auto;
     position: relative;
     height: 800px;
     width: 404px;
