@@ -1,7 +1,8 @@
 <template>
     <div class="competences-page">
         <div class="search-bar">
-            <input type="text" placeholder="Search" v-model="query" class="search-input"/>
+            <input type="text" placeholder="Search" :value="query"
+@input="e => query = e.target.value" class="search-input"/>
             <button class="search-btn"><fa icon="search"/></button>
         </div>
 
