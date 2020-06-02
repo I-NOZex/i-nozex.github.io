@@ -51,10 +51,14 @@ export default {
 
 
 .smartphone-frame {
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: relative;
     height: calc(100vh - 60px);
     width: calc(404px - 60px);
+    max-height: 640px;
     border: 16px solid #0c0c0d;
     border-radius: 40px;
     box-shadow: 
@@ -70,6 +74,7 @@ export default {
         position: relative;
         height: 100vh;
         width: 100%;
+        max-height: 100%;
         border: none;
         border-radius: 0px;
         box-shadow: 
