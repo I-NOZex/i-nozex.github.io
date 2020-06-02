@@ -1,19 +1,37 @@
 <template>
-    <router-link :to="href" :class="`tile ${size}`">
-        <div class="topleft"></div>
-        <div class="top"></div>
-        <div class="topright"></div>
-        <div class="left"></div>
-        <div class="center"></div>
-        <div class="right"></div>
-        <div class="bottomleft"></div>
-        <div class="bottom"></div>
-        <div class="bottomright"></div>
-        <div  class="content">
-            <fa :icon="icon" />
-            <span class="title-caption">{{tileCaption}}</span>
-        </div>
-    </router-link>
+    <div>
+        <router-link v-if="href" :to="href" :class="`tile ${size}`">
+            <div class="topleft"></div>
+            <div class="top"></div>
+            <div class="topright"></div>
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+            <div class="bottomleft"></div>
+            <div class="bottom"></div>
+            <div class="bottomright"></div>
+            <div  class="content">
+                <fa :icon="icon" />
+                <span class="title-caption">{{tileCaption}}</span>
+            </div>
+        </router-link>
+
+        <a v-if="externalHref" :href="externalHref" target="_blank" :class="`tile ${size}`">
+            <div class="topleft"></div>
+                <div class="top"></div>
+                <div class="topright"></div>
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="bottomleft"></div>
+                <div class="bottom"></div>
+                <div class="bottomright"></div>
+                <div  class="content">
+                    <fa :icon="icon" />
+                    <span class="title-caption">{{tileCaption}}</span>
+            </div>
+        </a>
+    </div>
 </template>
 
 <script>
@@ -31,11 +49,12 @@ export default {
             default: '',
             type: String
         },
-        href: {
-            default: '',
-            type: String
-        }  
-    }
+        href: [String, Object],
+        externalHref: {
+            type: String,
+            default: ''
+        }
+    },
 };
 </script>
 

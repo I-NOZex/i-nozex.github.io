@@ -24,32 +24,32 @@
         <Tile
             :icon="['fab', 'facebook-f']"
             tile-caption="hey"
-            :href="{ path: '/web-browser', query: { url: 'http://m.fb.me/tiagofmdotcom' }}"
+            externalHref="http://m.fb.me/tiagofmdotcom"
         />
         <!--|-->
         <Tile
             :icon="['fab', 'github']"
             tile-caption="hey"
-            :href="{ path: '/web-browser', query: { url: 'http://github.com/I-NOZex' }}"
+            externalHref="http://github.com/I-NOZex"
         />
         <!--|-->
         <Tile
             :icon="['fab', 'stack-overflow']"
             tile-caption="hey"
-            :href="{ path: '/web-browser', query: { url: 'http://stackoverflow.com/I-NOZex' }}"
+            externalHref="http://stackoverflow.com/I-NOZex"
         />
         <!--|-->
         <Tile
             :icon="['fas', 'envelope']"
             tile-caption="hey"
-            :href="{ path: '/web-browser', query: { url: 'mailto:tiagofm.profissional@outlook.pt' }}"
-        />
+            externalHref="mailto:tiagofm.profissional@outlook.pt"
+        />        
         <!--|-->
         <Tile
             :icon="['fab', 'linkedin']"
             tile-caption="People I worked with"
             size="medium"
-            :href="{ path: '/web-browser', query: { url: 'http://linkedin.com/in/tiagofmdotcom' }}"
+            externalHref="http://linkedin.com/in/tiagofmdotcom"
         />
         <!--|-->
         <Tile
@@ -60,17 +60,10 @@
         />
         <!--|-->
         <Tile
-            :icon="['fab', 'edge']"
-            tile-caption="Browser"
-            size="big"
-            href="/web-browser"
-        />
-        <!--|-->
-        <Tile
             :icon="['fab', 'instagram']"
-            tile-caption="hey"
+            tile-caption="Instagram"
             size="big"
-            :href="{ path: '/web-browser', query: { url: 'http://instagram.com/i_nozex' }}"
+            externalHref="http://instagram.com/i_nozex"
         />
         <!--|-->
 
