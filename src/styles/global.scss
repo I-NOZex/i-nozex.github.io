@@ -1,7 +1,8 @@
 @import "@/styles/_variables.scss";
 
-@media (min-width: 320px) and (max-width: 480px) {
-  
-  //CSS
-  
+@media (max-width: 500px) {
+  body {
+      margin: 0 auto;
+      padding: 0;
+  }
 }

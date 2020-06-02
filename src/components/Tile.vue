@@ -40,6 +40,8 @@ export default {
 </script>
 
 <style lang="scss">
+$width: 404px;
+
 .tile {
     padding: 10px;
     float: left;
@@ -58,22 +60,22 @@ export default {
 }
 
 .small {
-    width: calc(404px / 4);
-    height: calc(404px / 4);
+    width: calc(#{$width} / 4);
+    height: calc(#{$width} / 4);
     -webkit-perspective: 600px;
     -moz-perspective: 600px;
     perspective: 600px;
 }
 .medium {
-    width: calc(404px / 2);
-    height: calc(404px / 2);
+    width: calc(#{$width} / 2);
+    height: calc(#{$width} / 2);
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
     perspective: 1000px;
 }
 .big {
-    width: 404px;
-    height: calc(404px / 2);
+    width: $width;
+    height: calc(#{$width} / 2);
     -webkit-perspective: 2000px;
     -moz-perspective: 2000px;
     perspective: 2000px;
@@ -125,15 +127,15 @@ export default {
 }
 
 .small .content .svg-inline--fa{
-    font-size: calc(404px / 8);
+    font-size: calc(#{$width} / 8);
 }
 
 .medium .content .svg-inline--fa{
-    font-size: calc(404px / 4);
+    font-size: calc(#{$width} / 4);
 }
 
 .big .content .svg-inline--fa{
-    font-size: calc(404px / 4);
+    font-size: calc(#{$width} / 4);
 }
 
 .content .svg-inline--fa {
@@ -372,5 +374,49 @@ export default {
 }
 .hidden {
     overflow: hidden;
+}
+
+
+@media (max-width: 500px) {
+    $widthMobile: 100vw;
+
+    .small {
+        width: calc(#{$widthMobile} / 4);
+        height: calc(#{$widthMobile} / 4);
+        -webkit-perspective: calc(#{$widthMobile} * 1.5);
+        -moz-perspective: calc(#{$widthMobile} * 1.5);
+        perspective: calc(#{$widthMobile} * 1.5);
+    }
+    .medium {
+        width: calc(#{$widthMobile} / 2);
+        height: calc(#{$widthMobile} / 2);
+        -webkit-perspective: calc(#{$widthMobile} * 2.5);
+        -moz-perspective: calc(#{$widthMobile} * 2.5);
+        perspective: calc(#{$widthMobile} * 2.5);
+    }
+    .big {
+        width: $widthMobile;
+        height: calc(#{$widthMobile} / 2);
+        -webkit-perspective: calc(#{$widthMobile} * 5);
+        -moz-perspective: calc(#{$widthMobile} * 5);
+        perspective: calc(#{$widthMobile} * 5);
+    }
+}
+
+@media (max-width: 380px) {
+    $widthMobile: 100vw;
+
+    .small .content .svg-inline--fa{
+        font-size: calc(#{$widthMobile} / 8);
+    }
+
+    .medium .content .svg-inline--fa{
+        font-size: calc(#{$widthMobile} / 4);
+    }
+
+    .big .content .svg-inline--fa{
+        font-size: calc(#{$widthMobile} / 4);
+    }
+
 }
 </style>

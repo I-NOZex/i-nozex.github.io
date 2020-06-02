@@ -6,8 +6,11 @@
 
 <script>
 export default {
-    components: {
-        
+    props: {
+        isFullscreen: {
+            type: Boolean,
+            default: false,
+        }
     }
 }
 </script>
@@ -132,4 +135,11 @@ body:not(*:root) {
   -ms-overflow-style: none;
   scrollbar-width: none;
 } 
+
+
+@media (max-width: 500px) {
+    .smartphone-screen {
+        padding: 0;
+    }
+}
 </style>
