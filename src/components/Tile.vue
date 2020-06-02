@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="scss">
-$width: 404px;
+$width: calc(404px - 60px);
 
 .tile {
     padding: 10px;

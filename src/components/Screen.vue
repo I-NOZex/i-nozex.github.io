@@ -1,5 +1,5 @@
 <template>
-  <div class="smartphone-screen" id="app">
+  <div class="smartphone-screen" :class="{fullscreen: isFullscreen}" id="app">
         <router-view/>
   </div>
 </template>
@@ -139,7 +139,13 @@ body:not(*:root) {
 
 @media (max-width: 500px) {
     .smartphone-screen {
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .smartphone-screen.fullscreen {
+        padding-top: 0;
+        padding-bottom: 60px;
     }
 }
 </style>

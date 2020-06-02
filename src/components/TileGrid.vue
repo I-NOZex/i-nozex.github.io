@@ -36,7 +36,7 @@
         <Tile
             :icon="['fab', 'stack-overflow']"
             tile-caption="hey"
-            externalHref="http://stackoverflow.com/I-NOZex"
+            externalHref="https://stackoverflow.com/users/1869192/i-nozex"
         />
         <!--|-->
         <Tile
@@ -100,22 +100,16 @@ export default {
 .last-tile {
     padding: 10px;
     float: left;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.last-tile {
     margin-bottom: 10px;
     text-align: right;
+    box-sizing: border-box;
+    width: 100%;
+    color: white;
+    text-decoration: none;
 }
 
 .last-tile:active {
     background: rgba(0, 0, 0, 0.4);
-}
-
-.last-tile {
-    color: white;
-    text-decoration: none;
 }
 
 .last-tile .svg-inline--fa {

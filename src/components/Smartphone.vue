@@ -49,11 +49,12 @@ export default {
 
 <style lang="scss">
 
+
 .smartphone-frame {
     margin: 0 auto;
     position: relative;
-    height: 800px;
-    width: 404px;
+    height: calc(100vh - 60px);
+    width: calc(404px - 60px);
     border: 16px solid #0c0c0d;
     border-radius: 40px;
     box-shadow: 
@@ -67,7 +68,7 @@ export default {
     .smartphone-frame {
         margin: 0 auto;
         position: relative;
-        height: 100%;
+        height: 100vh;
         width: 100%;
         border: none;
         border-radius: 0px;
